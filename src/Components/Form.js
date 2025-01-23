@@ -257,15 +257,6 @@ const MemberForm = () => {
       </div>
 </div>
 <div className="form-group">
-  <div>
-      <label>Areas of Interest (comma separated):</label>
-      <input
-        type="text"
-        name="interests"
-        value={formData.interests.join(", ")}
-        onChange={(e) => handleArrayInputChange(e, "interests")}
-      />
-      </div>
       <div>
       <label>Preferred Role:</label>
       <input
@@ -276,26 +267,7 @@ const MemberForm = () => {
       />
       </div>
 </div>
-<div className="form-group">
-  <div>
-      <label>LinkedIn Profile:</label>
-      <input
-        type="url"
-        name="linkedIn"
-        value={formData.socialMedia.linkedIn}
-        onChange={(e) => handleNestedInputChange(e, "socialMedia")}
-      />
-      </div>
-      <div>
-      <label>GitHub Profile:</label>
-      <input
-        type="url"
-        name="github"
-        value={formData.socialMedia.github}
-        onChange={(e) => handleNestedInputChange(e, "socialMedia")}
-      />
-      </div>
-</div>
+
 <div className="form-group">
   <div>
       <label>Languages Spoken (comma separated):</label>
