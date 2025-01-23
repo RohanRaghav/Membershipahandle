@@ -76,10 +76,9 @@ const MemberForm = () => {
     });
 
     try {
-      const response = await fetch(
-        "https://serverhandle.vercel.app/api/members",{
-        method: 'POST',},
-        formDataToSend,
+      const response = await axios.post(
+        "https://serverhandle.vercel.app/api/members",
+        formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
       alert("Form submitted successfully!");
@@ -113,6 +112,7 @@ const MemberForm = () => {
       setImagePreview(null);
     } catch (error) {
       console.error("Error submitting the form", error);
+      console.log(formData);
       alert("Failed to submit the form. Please try again.");
     }
   };
