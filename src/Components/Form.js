@@ -370,7 +370,7 @@ const MemberForm = () => {
           <img
             src={imagePreview}
             alt="User Preview"
-            className="w-32 h-32 object-cover rounded-md"
+            className="immage"
           />
         </div>
       )}

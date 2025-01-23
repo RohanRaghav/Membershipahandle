@@ -85,3 +85,7 @@ img {
     flex-direction: column; /* Stack inputs on small screens */
   }
 }
+.immage{
+  max-width: 100px;
+  height: 100px;
+}
