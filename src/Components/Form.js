@@ -76,8 +76,9 @@ const MemberForm = () => {
     });
 
     try {
-      const response = await axios.post(
-        "https://serverhandle.vercel.app/api/members",
+      const response = await fetch(
+        "https://serverhandle.vercel.app/api/members",{
+        method: 'POST',},
         formDataToSend,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
