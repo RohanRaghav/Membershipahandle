@@ -17,7 +17,12 @@ const MemberForm = () => {
     extracurricularActivities: "",
     previousPositions: "",
     achievements: "",
+    interests: [],
     preferredRole: "",
+    socialMedia: {
+      linkedIn: "",
+      github: "",
+    },
     languages: [],
     specialSkills: "",
     suggestions: "",
@@ -73,9 +78,9 @@ const MemberForm = () => {
     try {
       const response = await axios.post(
         "https://serverhandle.vercel.app/api/members",
-        formData,
+        formDataToSend, // Use formDataToSend
         { headers: { "Content-Type": "multipart/form-data" } }
-      );
+      );      
       alert("Form submitted successfully!");
       setFormData({
         fullName: "",
@@ -267,7 +272,6 @@ const MemberForm = () => {
       />
       </div>
 </div>
-
 <div className="form-group">
   <div>
       <label>Languages Spoken (comma separated):</label>
