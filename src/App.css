@@ -20,7 +20,7 @@ form{
   backdrop-filter: blur(8px); /* Blurs the background behind the form */
   -webkit-backdrop-filter: blur(8px); /* For Safari */
   padding: 20px;
-  width: 70vw;
+  width: 50vw;
   text-align: center;
   z-index: 1;
 }
@@ -83,6 +83,9 @@ img {
 
   .form-group {
     flex-direction: column; /* Stack inputs on small screens */
+  }
+  form{
+    width: 70vw;
   }
 }
 .immage{
