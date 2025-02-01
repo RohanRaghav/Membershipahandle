@@ -71,11 +71,11 @@ const MemberForm = () => {
     });
 
     try {
-     const response = await axios.post(
-  "https://serverhandle.vercel.app/api/members",
-  formData, // Use formDataToSend
-  { headers: { "Content-Type": "multipart/form-data" } }
-);
+      const response = await axios.post(
+        "https://serverhandle.vercel.app/api/members",
+        formDataToSend, // Corrected variable
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );      
 
       alert("Form submitted successfully!");
       setFormData({
@@ -103,7 +103,10 @@ const MemberForm = () => {
       setImagePreview(null);
     } catch (error) {
       console.error("Error submitting the form", error);
-      console.log(formdata);
+      for (let pair of formDataToSend.entries()) {
+        console.log(pair[0] + ": " + pair[1]);
+      }
+      
       alert("Failed to submit the form. Please try again.");
     }
   };
