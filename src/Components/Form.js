@@ -103,7 +103,7 @@ const MemberForm = () => {
       setImagePreview(null);
     } catch (error) {
       console.error("Error submitting the form", error);
-      console.log(formData);
+      console.log(formDataToSend);
       alert("Failed to submit the form. Please try again.");
     }
   };
