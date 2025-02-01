@@ -20,7 +20,7 @@ form{
   backdrop-filter: blur(8px); /* Blurs the background behind the form */
   -webkit-backdrop-filter: blur(8px); /* For Safari */
   padding: 20px;
-  width: 50vw;
+  width: 70vw;
   text-align: center;
   z-index: 1;
 }
